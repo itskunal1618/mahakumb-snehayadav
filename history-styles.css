@@ -1,0 +1,473 @@
+/* History Page Specific Styles */
+
+/* Page Hero */
+.page-hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(128, 0, 32, 0.4)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="historyBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23003366;stop-opacity:1" /><stop offset="30%" style="stop-color:%23800020;stop-opacity:0.8" /><stop offset="70%" style="stop-color:%23FF9933;stop-opacity:0.6" /><stop offset="100%" style="stop-color:%23FFD700;stop-opacity:0.8" /></linearGradient></defs><rect width="1200" height="600" fill="url(%23historyBg)"/><circle cx="200" cy="100" r="30" fill="%23FFD700" opacity="0.4"/><circle cx="800" cy="80" r="20" fill="%23FF9933" opacity="0.5"/><circle cx="1000" cy="200" r="40" fill="%23FFD700" opacity="0.3"/><path d="M0,400 Q300,350 600,400 T1200,400 L1200,600 L0,600 Z" fill="%23003366" opacity="0.7"/><path d="M0,450 Q400,400 800,450 T1200,450 L1200,600 L0,600 Z" fill="%23800020" opacity="0.5"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.page-hero-content {
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+}
+
+.page-title {
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px var(--shadow-dark);
+    animation: fadeInUp 1s ease-out;
+}
+
+.page-subtitle {
+    font-size: 1.3rem;
+    color: var(--cream);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.breadcrumb a {
+    color: var(--primary-saffron);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.breadcrumb i {
+    color: var(--cream);
+    font-size: 0.8rem;
+}
+
+.breadcrumb span {
+    color: var(--white);
+}
+
+/* Mythology Section */
+.mythology-section {
+    background: var(--white);
+    padding: 100px 0;
+}
+
+.mythology-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.mythology-text h3 {
+    color: var(--maroon);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.mythology-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.mythology-quote {
+    background: linear-gradient(135deg, var(--cream), var(--light-gray));
+    padding: 2rem;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary-saffron);
+    margin: 2rem 0;
+    position: relative;
+}
+
+.mythology-quote i {
+    color: var(--primary-saffron);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.mythology-quote p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--deep-blue);
+    margin-bottom: 1rem;
+}
+
+.mythology-quote cite {
+    color: var(--maroon);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.mythology-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.visual-placeholder {
+    width: 400px;
+    height: 350px;
+    background: linear-gradient(135deg, var(--light-gray), var(--cream));
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px dashed var(--maroon);
+    color: var(--text-light);
+}
+
+.visual-placeholder i {
+    font-size: 4rem;
+    color: var(--maroon);
+    margin-bottom: 1rem;
+}
+
+/* Timeline Section */
+.timeline-section {
+    background: linear-gradient(135deg, var(--cream), var(--light-gray));
+    padding: 100px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-saffron), var(--gold), var(--maroon));
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-saffron), var(--gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+    z-index: 2;
+}
+
+.timeline-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px var(--shadow);
+    width: 45%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-dark);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    transform: translateY(-50%);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    right: -30px;
+    border-left-color: var(--white);
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    left: -30px;
+    border-right-color: var(--white);
+}
+
+.timeline-date {
+    background: linear-gradient(135deg, var(--maroon), var(--deep-blue));
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.timeline-content h3 {
+    color: var(--deep-blue);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.timeline-content p {
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+/* Geography Section */
+.geography-section {
+    background: var(--white);
+    padding: 100px 0;
+}
+
+.geography-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.geography-card {
+    background: linear-gradient(135deg, var(--cream), var(--white));
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 5px solid var(--primary-saffron);
+}
+
+.geography-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-dark);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--deep-blue), var(--maroon));
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-header i {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content p {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.card-content strong {
+    color: var(--maroon);
+}
+
+/* Significance Section */
+.significance-section {
+    background: linear-gradient(135deg, var(--deep-blue), var(--maroon));
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.significance-section .section-title {
+    color: var(--gold);
+}
+
+.significance-section .section-subtitle {
+    color: var(--cream);
+}
+
+.significance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.significance-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.significance-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.significance-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-saffron), var(--gold));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--gold);
+    font-size: 2rem;
+}
+
+.significance-icon i {
+    color: var(--gold) !important;
+}
+
+.significance-item h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.significance-item p {
+    color: var(--cream);
+    line-height: 1.6;
+}
+
+/* Responsive Design for History Page */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .mythology-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .visual-placeholder {
+        width: 100%;
+        max-width: 350px;
+        height: 250px;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-marker {
+        left: 30px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+    }
+    
+    .timeline-content {
+        width: calc(100% - 80px);
+        margin-left: 80px !important;
+        margin-right: 0 !important;
+    }
+    
+    .timeline-content::before {
+        left: -30px !important;
+        right: auto !important;
+        border-right-color: var(--white) !important;
+        border-left-color: transparent !important;
+    }
+    
+    .geography-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .significance-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-hero {
+        height: 50vh;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .mythology-quote {
+        padding: 1.5rem;
+    }
+    
+    .timeline-content {
+        padding: 1.5rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .significance-item {
+        padding: 1.5rem;
+    }
+}

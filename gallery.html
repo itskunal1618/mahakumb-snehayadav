@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore stunning visuals from MAHAKUMBH - sacred rituals, devotees, Ganga Aarti, and spiritual moments captured in photos and videos.">
+    <meta name="keywords" content="Mahakumbh Gallery, Kumbh Mela Photos, Ganga Aarti, Sadhus, Spiritual Photography, Hindu Rituals">
+    <title>Gallery - MAHAKUMBH</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="gallery-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo" style="justify-content: center; display: flex; align-items: center;">
+                <img src="logo.png" alt="Mahakumbh Logo" class="header-logo" style="height: 140px;" />
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="history.html" class="nav-link">History</a>
+                </li>
+                <li class="nav-item">
+                    <a href="gallery.html" class="nav-link active">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="events.html" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Me</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title" style="font-size:3.5rem;color:var(--gold);margin-bottom:1rem;text-shadow:2px 2px 4px var(--shadow-dark);animation:fadeInUp 1s ease-out;font-family:'Cinzel',serif;font-weight:700;text-align:center;">Sacred Gallery</h1>
+                <p class="page-subtitle" style="color:#FFFFFF;text-align:center;margin-top:0;margin-bottom:2rem;">Witness the divine moments and spiritual grandeur</p>
+                <div class="hero-buttons" style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;animation:fadeInUp 1s ease-out 0.6s both;margin-bottom:2rem;">
+                    <a href="index.html" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <a href="gallery.html" class="btn btn-secondary">
+                        <i class="fas fa-images"></i>
+                        Gallery
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    All Media
+                </button>
+                <button class="filter-btn" data-filter="photos">
+                    <i class="fas fa-camera"></i>
+                    Photos
+                </button>
+                <button class="filter-btn" data-filter="videos">
+                    <i class="fas fa-video"></i>
+                    Videos
+                </button>
+                <button class="filter-btn" data-filter="rituals">
+                    <i class="fas fa-hands-praying"></i>
+                    Rituals
+                </button>
+                <button class="filter-btn" data-filter="crowds">
+                    <i class="fas fa-users"></i>
+                    Gatherings
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Photo Items -->
+                <div class="gallery-item" data-category="photos rituals">
+                    <div class="gallery-card">
+                        <img src="uploaded-ganga-aarti.jpg.png" alt="Ganga Aarti Ceremony at Triveni Sangam" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('ganga-aarti')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Ganga Aarti Ceremony</h4>
+                            <p>Evening prayers at Triveni Sangam</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Sacred Ganga Aarti</h3>
+                            <p>Thousands of devotees participate in the evening Aarti ceremony</p>
+                            <button class="view-btn" onclick="openLightbox('ganga-aarti')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos crowds">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.24.48 AM.jpeg" alt="Devotee Gathering at Mahakumbh" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('crowd-aerial')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Devotee Gathering</h4>
+                            <p>Millions unite in faith</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Sea of Devotion</h3>
+                            <p>Aerial view of the massive gathering at Sangam</p>
+                            <button class="view-btn" onclick="openLightbox('crowd-aerial')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="videos rituals">
+                    <div class="gallery-card video-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.33.24 AM.jpeg" alt="Sacred Bath Ritual Video" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('ritual-bath')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Sacred Bath Ritual</h4>
+                            <p>Holy dip at Triveni Sangam</p>
+                        </div>
+                        <div class="video-duration">3:45</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Ritual Bathing</h3>
+                            <p>Devotees taking the sacred dip for spiritual purification</p>
+                            <button class="view-btn" onclick="openLightbox('ritual-bath')">
+                                <i class="fas fa-play"></i>
+                                Play Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos rituals">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.35.09 AM.jpeg" alt="Naga Sadhus in Procession" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('naga-sadhus')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Naga Sadhus</h4>
+                            <p>Holy ascetics in procession</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Naga Sadhu Procession</h3>
+                            <p>Sacred procession of revered ascetics</p>
+                            <button class="view-btn" onclick="openLightbox('naga-sadhus')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos crowds">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.37.02 AM.jpeg" alt="Sangam Confluence" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('sangam-view')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Sangam Confluence</h4>
+                            <p>Sacred meeting of rivers</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Triveni Sangam</h3>
+                            <p>The holy confluence where three rivers meet</p>
+                            <button class="view-btn" onclick="openLightbox('sangam-view')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="videos crowds">
+                    <div class="gallery-card video-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.39.06 AM.jpeg" alt="Kumbh Procession" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('procession-video')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Kumbh Procession</h4>
+                            <p>Grand spiritual parade</p>
+                        </div>
+                        <div class="video-duration">5:20</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Royal Procession</h3>
+                            <p>Magnificent procession of spiritual leaders</p>
+                            <button class="view-btn" onclick="openLightbox('procession-video')">
+                                <i class="fas fa-play"></i>
+                                Play Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos rituals">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.43.21 AM.jpeg" alt="Havan Ceremony" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('havan-ritual')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Havan Ceremony</h4>
+                            <p>Sacred fire ritual</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Vedic Fire Ritual</h3>
+                            <p>Ancient Havan ceremony performed by priests</p>
+                            <button class="view-btn" onclick="openLightbox('havan-ritual')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos crowds">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 11.58.42 AM.jpeg" alt="Night Gathering at Ghats" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('night-gathering')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Night Gathering</h4>
+                            <p>Devotees under starlit sky</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Moonlit Devotion</h3>
+                            <p>Night time prayers and meditation at the ghats</p>
+                            <button class="view-btn" onclick="openLightbox('night-gathering')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="videos rituals">
+                    <div class="gallery-card video-card">
+                        <img src="Gemini_Generated_Image_mclqgmclqgmclqgm.png" alt="Spiritual Discourse Video" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('spiritual-discourse')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Spiritual Discourse</h4>
+                            <p>Wisdom from saints</p>
+                        </div>
+                        <div class="video-duration">12:30</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Sacred Teachings</h3>
+                            <p>Spiritual discourse by revered saints and gurus</p>
+                            <button class="view-btn" onclick="openLightbox('spiritual-discourse')">
+                                <i class="fas fa-play"></i>
+                                Play Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos crowds">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 12.13.46 PM.jpeg" alt="Sunrise Prayers at Ganga" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('sunrise-prayers')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Sunrise Prayers</h4>
+                            <p>Dawn devotion at Ganga</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Dawn at Sangam</h3>
+                            <p>Beautiful sunrise prayers at the holy confluence</p>
+                            <button class="view-btn" onclick="openLightbox('sunrise-prayers')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="photos rituals">
+                    <div class="gallery-card">
+                        <img src="WhatsApp Image 2025-07-20 at 12.18.10 PM.jpeg" alt="Flower Offerings at Kumbh" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('flower-offerings')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Flower Offerings</h4>
+                            <p>Sacred floral tributes</p>
+                        </div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Floral Devotion</h3>
+                            <p>Devotees offering flowers to the sacred rivers</p>
+                            <button class="view-btn" onclick="openLightbox('flower-offerings')">
+                                <i class="fas fa-expand"></i>
+                                View Full
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="videos crowds">
+                    <div class="gallery-card video-card">
+                        <img src="WhatsApp Image 2025-07-20 at 12.28.03 PM.jpeg" alt="Cultural Performances Video" loading="lazy" style="width:100%;height:220px;object-fit:cover;border-radius:12px 12px 0 0;cursor:pointer;" onclick="openLightbox('cultural-performance')" />
+                        <div class="gallery-img-overlay"><i class="fas fa-search-plus"></i></div>
+                        <div class="placeholder-text">
+                            <h4>Cultural Performances</h4>
+                            <p>Traditional arts showcase</p>
+                        </div>
+                        <div class="video-duration">8:15</div>
+                    </div>
+                    <div class="gallery-overlay">
+                        <div class="overlay-content">
+                            <h3>Cultural Heritage</h3>
+                            <p>Traditional dance and music performances</p>
+                            <button class="view-btn" onclick="openLightbox('cultural-performance')">
+                                <i class="fas fa-play"></i>
+                                Play Video
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="btn btn-primary load-more-btn">
+                    <i class="fas fa-plus-circle"></i>
+                    Load More Images
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="gallery-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Sacred Photos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Spiritual Videos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Views</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-number">50K+</div>
+                    <div class="stat-label">Devotees Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-media">
+                <div class="media-placeholder">
+                    <i class="fas fa-image"></i>
+                    <p>Media content will be displayed here</p>
+                </div>
+            </div>
+            <div class="lightbox-info">
+                <h3 id="lightbox-title">Media Title</h3>
+                <p id="lightbox-description">Media description will appear here</p>
+            </div>
+            <div class="lightbox-nav">
+                <button class="nav-btn prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo" style="justify-content: center;">
+                        <img src="logo.png" alt="Mahakumbh Logo" class="footer-logo-img new-footer-logo" />
+                    </div>
+                    <p class="footer-description">Celebrating the divine confluence of faith, tradition, and spirituality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sacred Information</h4>
+                    <ul>
+                        <li><a href="#">Triveni Sangam</a></li>
+                        <li><a href="#">Ritual Timings</a></li>
+                        <li><a href="#">Spiritual Guides</a></li>
+                        <li><a href="#">Accommodation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@mahakumbh.com</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Prayagraj, Uttar Pradesh</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MAHAKUMBH. Created with devotion and respect for our sacred traditions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery-script.js"></script>
+</body>
+</html>
